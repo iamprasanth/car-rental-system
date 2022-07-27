@@ -1,0 +1,23 @@
+.date-selection-page .error-div {
+    padding-top: 22px;
+}
+
+.date-selection-page i {
+    height: 89% !important;
+}
+
+.date-selection-page .form-wrapper {
+    margin-left: 0% !important;
+    width: 100%;
+    height: 280px;
+}
+
+.date-selection-page {
+    width: 108% !important;
+}
+
+.date-selection-page .button {
+    padding-top: 20px;
+    height: 60px !important;
+    width: 200px;
+}
