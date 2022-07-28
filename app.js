@@ -37,7 +37,8 @@ app.get("/*", function (req, res) {
 });
 // }
 
-// Serving
-app.listen(5000, () => {
-    console.log('server is running')
-})
+// // Serving
+// app.listen(5000, () => {
+//     console.log('server is running')
+// })
+module.exports = app;
