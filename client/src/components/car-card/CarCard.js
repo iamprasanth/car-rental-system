@@ -1,18 +1,7 @@
-import Moment from 'react-moment';
-import api from "../../config/api";
-import axios from "axios";
-import { useState, useEffect } from "react";
 import { useHistory, useLocation } from 'react-router-dom';
 
 export const CarCard = ({ car }) => {
     const history = useHistory();
-    const location = useLocation();
-    const user = JSON.parse(localStorage.getItem("user"));
-    const config = {
-        header: {
-            "Content-Type": "application/json",
-        },
-    };
 
     const redirectToConfirmation = (car) => {
         localStorage.setItem("selectedCar", JSON.stringify(car));
