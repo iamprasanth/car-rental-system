@@ -19,8 +19,8 @@ app.use(cors(corsOptions));
 app.use(fileUpload());
 
 // Routes
-const usersRouter = require('./routes/users')
-app.use('/users', usersRouter)
+// const usersRouter = require('./routes/users')
+// app.use('/users', usersRouter)
 const authRouter = require('./routes/auth')
 app.use('/auth', authRouter)
 const bookingRouter = require('./routes/booking')
