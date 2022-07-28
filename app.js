@@ -30,12 +30,12 @@ app.use('/orders', orderRouter)
 
 // Specify React build path for server side rendering
 // if (process.env.NODE_ENV === 'production') {
-// app.use(express.static(path.join(__dirname, "client", "build")));
-app.use(express.static('/var/app/client/build/index.html'));
+app.use(express.static(path.join(__dirname, "client", "build")));
+// app.use(express.static('/client/build/index.html'));
 
-
+console.log(`Filename is ${__filename}`);
 app.get("/*", function (req, res) {
-    res.sendFile(path.join("/var/app/", "./client/build/index.html"));
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 
