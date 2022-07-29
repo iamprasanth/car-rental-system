@@ -27,6 +27,8 @@ const bookingRouter = require('./routes/booking')
 app.use('/booking', bookingRouter)
 const orderRouter = require('./routes/orders')
 app.use('/orders', orderRouter)
+const chatbotRouter = require('./routes/chatbot')
+app.use('/chatbot', chatbotRouter)
 
 // Specify React build path for server side rendering
 // if (process.env.NODE_ENV === 'production') {

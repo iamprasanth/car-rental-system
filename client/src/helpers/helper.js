@@ -6,5 +6,6 @@ export function dateFormatter(date) {
     var date = new Date(date);
     const currentMonth = monthNames[date.getMonth()];
     const currentDate = date.getDate();
+
     return `${currentMonth} ${currentDate}, ${date.getFullYear()}`;
 }
