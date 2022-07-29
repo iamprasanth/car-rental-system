@@ -1,5 +1,5 @@
 // const apiBaseUrl = process.env.API_URL;
-const apiBaseUrl = "http://localhost:5000/";
+const apiBaseUrl = process.env.REACT_APP_API_URL;
 
 exports.apiBaseUrl = apiBaseUrl;
 exports.login = apiBaseUrl + 'auth/login/';
