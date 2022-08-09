@@ -114,7 +114,6 @@ exports.checkout = async (req, res) => {
                 idempotencyKey,
             }
         )
-        console.log(charge)
         // Get new order number and store details to Order table
         const orderNumber = await generateOrderNumber()
         const newOrder = new Order({

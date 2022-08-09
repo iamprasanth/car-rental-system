@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./bin/www",
-    "nodemon": "nodemon ./bin/www"
+    "star": "nodemon ./bin/www"
   },
   "author": "",
   "license": "ISC",
@@ -13,14 +13,11 @@
     "cloudinary": "^1.27.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "escape-string-regexp": "^5.0.0",
     "express": "^4.17.1",
-    "express-fileupload": "^1.2.1",
-    "formidable": "^1.2.2",
     "mongoose": "^6.0.7",
     "mongoose-double": "0.0.1",
     "morgan": "^1.10.0",
-    "mv": "^2.1.1",
+    "nodemon": "^2.0.19",
     "stripe": "^9.13.0",
     "uuid": "^8.3.2"
   }
