@@ -35,6 +35,7 @@ export default function Login({ history }) {
             const authentication = getAuth();
             signInWithEmailAndPassword(authentication, values.email, values.password)
                 .then((response) => {
+                    console.log(response);
                     axios.post(
                         api.login,
                         {
