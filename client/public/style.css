@@ -2,7 +2,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
 
+body {
+  background: #eff2f5 !important;
 }
 
 .header__left img {
