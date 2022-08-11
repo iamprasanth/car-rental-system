@@ -26,7 +26,7 @@ export default function Confirmation({ history }) {
         fromDate: settings.from_date,
         toDate: settings.to_date,
         totalDays: settings.number_of_days,
-        totalFare: car.perDayFare * settings.number_of_days,
+        totalFare: (car.perDayFare * settings.number_of_day).toFixed(2),
     }
     const handleToken = async (token, addresses) => {
         const result = await axios.post(
