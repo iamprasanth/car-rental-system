@@ -13,9 +13,9 @@ const ThankYou = () => {
                     </div>
                     <div className="col-md-6 col-sm-12 text-center main-div">
                         <h3>Thank you for your order, Your order number is :</h3>
-                        <h3><b>{orderNumber}</b></h3>
+                        <h3><b>{orderNumber}</b></h3><br />
 
-                        <h3>You can use our chat bot if you want to retreive the order details</h3>
+                        <h3>You can use our chat bot to retreive the order details</h3>
                     </div>
                 </div>
             </div>

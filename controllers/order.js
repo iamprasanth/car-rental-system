@@ -4,7 +4,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 // Get orders
 exports.getOrdersList = async (req, res) => {
-    const orders = await Order.find({}).sort([['createdAt', -1]]).populate('carId');
+    const orders = await Order.find({}).sort([['createdAt', -1]]).populate('carId').populate('customerId');
     // const customerId = "cus_M8ViBydAt8FZqp";
     // const charge = await stripe.charges.create(
     //     {

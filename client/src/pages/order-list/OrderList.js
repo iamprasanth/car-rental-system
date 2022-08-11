@@ -68,6 +68,21 @@ export default function Confirmation({ history }) {
                 },
                 {
                     "render": function (data, type, content, meta) {
+                        return content.customerId.fullname
+                    }
+                },
+                {
+                    "render": function (data, type, content, meta) {
+                        return content.customerId.email
+                    }
+                },
+                {
+                    "render": function (data, type, content, meta) {
+                        return content.customerId.phone
+                    }
+                },
+                {
+                    "render": function (data, type, content, meta) {
                         return content.carId.make + " " + content.carId.model
                     }
                 },
@@ -114,6 +129,9 @@ export default function Confirmation({ history }) {
                             <thead>
                                 <tr>
                                     <th>Order Number</th>
+                                    <th>Customer Name</th>
+                                    <th>Customer Email</th>
+                                    <th>Customer Contact</th>
                                     <th>Car</th>
                                     <th>Order Created On</th>
                                     <th>Service From Date</th>
