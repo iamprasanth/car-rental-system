@@ -64,13 +64,13 @@ export default function Confirmation({ history }) {
                                 <p className="text-muted">Service start date: {dateFormatter(settings.from_date)}</p>
                                 <p className="text-muted">Service end date : {dateFormatter(settings.to_date)}</p>
                                 <p className="text-muted">Per day price: $ {car.perDayFare}</p>
-                                <p className="text-muted">Total Fare: $ {car.perDayFare * settings.number_of_days}</p>
+                                <p className="text-muted">Total Fare: $ {(car.perDayFare * settings.number_of_days).toFixed(2)}</p>
 
                                 <StripeCheckout
                                     image={process.env.REACT_APP_PUBLIC_FOLDER + 'favicon.png'}
                                     stripeKey="pk_test_51LQEUHAcQsSoHkd68ksJ8gQhVhD1Vra8fHZZJPAhw04eipQm6kORr7YK4dOWTsHm18CbNHI0TLFBSPrMiedg9SGQ00IIiHcCxu"
                                     token={handleToken}
-                                    amount={car.perDayFare * settings.number_of_day * 100}
+                                    amount={(car.perDayFare * settings.number_of_day).toFixed(2) * 100}
                                     name="Checkout"
                                     billingAddress
                                     shippingAddress={false}
