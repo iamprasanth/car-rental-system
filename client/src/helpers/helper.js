@@ -3,9 +3,16 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 ];
 
 export function dateFormatter(date) {
-    var date = new Date(date);
-    const currentMonth = monthNames[date.getMonth()];
-    const currentDate = date.getDate();
+    var dateParts = date.split('-');
+    if (date.includes("T")) {
+        var yearParts = dateParts[2].split('T');
+        var dateObj = new Date(dateParts[0], dateParts[1] - 1, yearParts[0]);
+    } else {
+        var dateObj = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
+    }
+    const currentMonth = monthNames[dateObj.getMonth()];
+    const currentDate = dateObj.getDate();
+    console.log(dateObj);
 
-    return `${currentMonth} ${currentDate}, ${date.getFullYear()}`;
+    return `${currentMonth} ${currentDate}, ${dateObj.getFullYear()}`;
 }
